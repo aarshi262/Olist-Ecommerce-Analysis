@@ -13,14 +13,20 @@ st.set_page_config(
 )
 
 BASE_DIR = Path(__file__).resolve().parent
+
 DB_PATH = BASE_DIR / "olist.db"
+ZIP_PATH = BASE_DIR / "olist.zip"
+
+if not DB_PATH.exists():
+    if ZIP_PATH.exists():
+        with zipfile.ZipFile(ZIP_PATH, "r") as zip_ref:
+            zip_ref.extract("olist.db", BASE_DIR)
+    else:
+        st.error("Database ZIP file not found!")
+        st.stop()
 
 st.title("📊 Olist E-Commerce Intelligence Analyzer")
 st.caption("Brazilian E-Commerce | Sales | Reviews | Delivery Insights")
-
-if not DB_PATH.exists():
-    st.error(f"Database not found: {DB_PATH}")
-    st.stop()
 
 
 @st.cache_data
