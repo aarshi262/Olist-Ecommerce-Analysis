@@ -45,6 +45,19 @@ Brazilian E-Commerce Public Dataset by Olist, available on Kaggle.
 3. Ensure the database file is extracted from `olist.zip` into the project directory.
 4. Run `streamlit run app.py`.
 
+## Dashboard Screenshots
+### 1. Overview
+![Overview](overview.png)
+
+### 2. Sales & Payments
+![Sales & Payments](Sales-Payments.png)
+
+### 3. Customer Reviews
+![Customer Reviews](customer-reviews.png)
+
+### 4. Delivery Performance
+![Delivery](delivery.png)
+
 ## Author
 Aarshi Singh
 MSc Computer Science | Data Analytics Projects
